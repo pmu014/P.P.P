@@ -1,0 +1,111 @@
+* {
+    font-family: 'Gowun Dodum', sans-serif;
+}
+
+.head {
+    width: 100%;
+    height: 200px;
+
+    background-color: rebeccapurple;
+    background-position: center;
+    background-size: cover;
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.head > h1 {
+    font-size: 60px;
+}
+
+.main-text {
+    background-image: url('https://www.10wallpaper.com/wallpaper/1366x768/1712/Purple_cloud_ocean_Galaxy_Note_8_Wallpapers_1366x768.jpg');
+    background-size: cover;
+}
+
+.MBTI {
+    padding: 80px;
+    margin-right: 100px;
+    margin-left: 100px;
+    color: #8e00d8;
+}
+
+.MBTI > h1 {
+    font-size: 90px;
+}
+
+.MBTI > h2 {
+    font-size: 130px;
+}
+
+.ppp {
+    margin-right: 100px;
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ppp > h1 {
+    font-size: 70px;
+}
+
+.pp {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.p {
+    width: 800px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 50px;
+    margin-left: 50px;
+    align-items: center;
+}
+
+.members {
+    width: 100%;
+    height: 400px;
+    background-color: #666;
+    text-align: center;
+    color: #fff;
+}
+
+.member_title {
+    font-size: 32px;
+    padding: 40px 0;
+}
+
+.mem_wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 80%;
+}
+
+.member {
+    width: 20%;
+    list-style: none;
+}
+
+.mem_img {
+    margin: 0 auto 16px;
+    width: 160px;
+    height: 160px;
+    border-radius: 100px;
+    background-color: #bababa;
+    /* background: url(https://png.pngtree.com/png-vector/20190716/ourlarge/pngtree-edit-profile-icon-trendy-style-isolated-background-png-image_1543058.jpg) center; */
+    /* background-size: cover; */
+}
+
+.mem_name {
+    font-size: 20px;
+}

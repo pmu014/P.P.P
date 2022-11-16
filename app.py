@@ -9,6 +9,10 @@ db = client.dbsparta
 def home():
     return render_template('index.html')
 
+@app.route('/members')
+def getmembers():
+    return render_template('members_layout.html')
+
 @app.route("/join", methods=["POST"])
 def join_post():
     name_receive = request.form['name_give']
