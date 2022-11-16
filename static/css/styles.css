@@ -1,232 +1,320 @@
 body {
-  background-color: #ccc;
+    background-color: #ccc;
 }
 
 header {
-  position: relative;
-  width: 100%;
-  height: 600px;
-  background: url(https://images.unsplash.com/photo-1474515644177-2b51198d11ed?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80) center;
-  background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background: url(https://images.unsplash.com/photo-1474515644177-2b51198d11ed?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80) center;
+    background-size: cover;
 }
 
 
 h1 {
-  font-size: 300px;
-  /*position: absolute;*/
-  /*bottom: -64px;*/
-  color: #fff;
-  text-align: center;
-  padding-top: 100px;
-  font-weight: normal;
+    font-size: 300px;
+    /*position: absolute;*/
+    /*bottom: -64px;*/
+    color: #fff;
+    text-align: center;
+    padding-top: 100px;
+    font-weight: normal;
 }
 
 .introduce {
-  width: 100%;
-  height: 400px;
-  background-color: #eee;
-  text-align: center;
+    width: 100%;
+    height: 400px;
+    background-color: #eee;
+    text-align: center;
 }
 
 .intro_title {
-  font-size: 32px;
-  padding: 40px 0;
-  color: #8e00d8;
+    font-size: 32px;
+    padding: 40px 0;
+    color: #8e00d8;
 }
 
 .intro_text {
-  font-size: 18px;
-  font-weight: bold;
-  color: #393939;
-  line-height: 26px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #393939;
+    line-height: 26px;
 }
 
 .members {
-  width: 100%;
-  height: 400px;
-  background-color: #666;
-  text-align: center;
-  color: #fff;
+    width: 100%;
+    height: 400px;
+    background-color: #666;
+    text-align: center;
+    color: #fff;
 }
 
 .member_title {
-  font-size: 32px;
-  padding: 40px 0;
+    font-size: 32px;
+    padding: 40px 0;
 }
 
 .mem_wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;  
-  margin: auto;
-  width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 80%;
 }
 
 .member {
-  width: 20%;
+    width: 20%;
 }
 
 .mem_img {
-  margin: 0 auto 16px;
-  width: 160px;
-  height: 160px;
-  border-radius: 100px;
-  background-color: #bababa;
-  /* background: url(https://png.pngtree.com/png-vector/20190716/ourlarge/pngtree-edit-profile-icon-trendy-style-isolated-background-png-image_1543058.jpg) center; */
-  /* background-size: cover; */
+    margin: 0 auto 16px;
+    width: 160px;
+    height: 160px;
+    border-radius: 100px;
+    background-color: #bababa;
+    /* background: url(https://png.pngtree.com/png-vector/20190716/ourlarge/pngtree-edit-profile-icon-trendy-style-isolated-background-png-image_1543058.jpg) center; */
+    /* background-size: cover; */
 }
 
-.mem_name { 
-  font-size: 20px;
+.mem_name {
+    font-size: 20px;
 }
+
+/*.comments {*/
+/*  position: relative;*/
+/*  width: 100%;*/
+/*  height: 46px;*/
+/*  background-color: #8e00d8;*/
+/*}*/
+
+/* 예진님 방명록 css 시작 */
 
 .comments {
-  position: relative;
-  width: 100%;
-  height: 46px;
-  background-color: #8e00d8;
+    display: none;
+    position: relative;
+    width: 100%;
 }
 
-.comm_txt {
-  text-align: center;
+.guestBook {
+    width: 100%;
+    background-color: #ccc;
+    padding: 10px;
+}
+
+.d-grid gap-2 {
+    width: 95%;
+    margin: 20px auto 20px auto;
+}
+
+.btn-primary {
+    background-color: #8e00d8;
+    border-color: #8e00d8;
+}
+
+.btn-primary:hover {
+    background-color: #620d90;
+    border-color: #620d90;
+}
+
+.btn-dark{
+  background-color: #fff;
+  color: #8e00d8;
+  border: 2px solid #8e00d8;
+  font-weight: 600;
+  width: 115px;
+}
+
+.btn-dark:hover {
+  background-color: #8e00d8;
   color: #fff;
-  font-weight: 400;
-  padding-top: 8px;
-  font-size: 16px;
+  border-color: #8e00d8;
+}
+
+.btn-outline-dark {
+  width: 115px;
+  margin-left: 20px;
+  border: 2px solid #666;
+  color: #666;
+  font-weight: 600;
+}
+
+.btn-outline-dark:hover {
+  background-color: #666;
+  color: #fff;
+  border-color: #666;
+}
+
+.mypost {
+    width: 95%;
+    max-width: 100%;
+    margin: 20px auto 20px auto;
+    background-color: white;
+    box-shadow: 0px 0px 3px 0px black;
+    padding: 20px;
+}
+
+.mypost > button {
+    margin-top: 15px;
+}
+
+.comm-list {
+    background-color: white;
+    width: 100%;
+    margin: 20px auto 20px auto;
+}
+
+.card {
+    padding: 10px;
+    margin: 10px 20px 10px 20px;
+}
+
+.postBt {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* 예진님 방명록 css 끝 */
+
+.comm_txt {
+    text-align: center;
+    color: #fff;
+    font-weight: 400;
+    padding-top: 8px;
+    font-size: 16px;
 }
 
 .ico_down::before {
-  position: absolute;
-  left: 49.8%;
-  content: "";
-  width: 8px;
-  height: 8px;
-  border-top: 2px solid #fff;
-  border-left: 2px solid #fff;
-  transform: translate(0px, 0px) rotate(225deg);
+    position: absolute;
+    left: 49.8%;
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    transform: translate(0px, 0px) rotate(225deg);
 }
 
 
 .join {
-  height: 100%;
-  margin-bottom: 160px;
-  /* background-color: #ccc; */
+    height: 100%;
+    margin-bottom: 160px;
+    /* background-color: #ccc; */
 }
 
 .join_btn {
-  display: block;
-  width: 150px;
-  height: 40px;
-  background-color: #fff;
-  border: 2px solid #8e00d8;
-  border-radius: 75px;
-  margin: 40px auto 20px;
-  color: #8e00d8;
-  cursor: pointer;
-  font-weight: 600;
-  /*border: none;*/
+    display: block;
+    width: 150px;
+    height: 40px;
+    background-color: #fff;
+    border: 2px solid #8e00d8;
+    border-radius: 75px;
+    margin: 40px auto 20px;
+    color: #8e00d8;
+    cursor: pointer;
+    font-weight: 600;
+    /*border: none;*/
 }
 
 .join_wrap {
-  display: none;
-  width: 400px;
-  height: 100%;
-  margin: 40px auto;
-  padding: 10px 0 20px;
-  background-color: #fff;
-  border: 1px solid #aaa;
+    display: none;
+    width: 400px;
+    height: 100%;
+    margin: 40px auto;
+    padding: 10px 0 20px;
+    background-color: #fff;
+    border: 1px solid #aaa;
 }
 
 .join_wrap > input,
 .join_wrap > textarea {
-  width: 380px;
-  height: 50px;
-  margin: 5px 10px;
-  padding: 10px 10px;
-  border: 1px solid #ccc;
-  font-size: 20px;
-  font-weight: 600;
-  color: #666666;
+    width: 380px;
+    height: 50px;
+    margin: 5px 10px;
+    padding: 10px 10px;
+    border: 1px solid #ccc;
+    font-size: 20px;
+    font-weight: 600;
+    color: #666666;
 }
 
 .btn_wrap {
-  height: 100px;
+    height: 100px;
 }
 
 input.join_submit {
-  display: block;
-  width: 150px;
-  height: 40px;
-  background-color: #8e00d8;
-  border-radius: 75px;
-  color: #fff;
-  font-size: 16px;
-  margin: 40px 15px 30px 35px;
-  font-weight: 500;
-  cursor: pointer;
-  padding: 0;
-  border: none;
-  float: left;
+    display: block;
+    width: 150px;
+    height: 40px;
+    background-color: #8e00d8;
+    border-radius: 75px;
+    color: #fff;
+    font-size: 16px;
+    margin: 40px 15px 30px 35px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0;
+    border: none;
+    float: left;
 }
 
 input.join_close {
-  display: block;
-  width: 150px;
-  height: 40px;
-  background-color: #8e00d8;
-  border-radius: 75px;
-  color: #fff;
-  font-size: 16px;
-  margin: 40px 15px 30px;
-  font-weight: 500;
-  cursor: pointer;
-  padding: 0;
-  border: none;
-  float: left;
+    display: block;
+    width: 150px;
+    height: 40px;
+    background-color: #8e00d8;
+    border-radius: 75px;
+    color: #fff;
+    font-size: 16px;
+    margin: 40px 15px 30px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0;
+    border: none;
+    float: left;
 }
 
 .join_wrap > textarea::placeholder,
 .join_wrap > input::placeholder {
-  color: #ccc;
-  
+    color: #ccc;
+
 }
 
 .join_wrap > textarea:focus,
 .join_wrap > input:focus {
-  outline: none;
-  border-color: #8e00d8;  
+    outline: none;
+    border-color: #8e00d8;
 }
 
 .request {
-  width: 380px;
-  margin: 20px auto 0;
+    width: 380px;
+    margin: 20px auto 0;
 }
 
 .req_member {
-  position: relative;
-  width: 100%;
-  height: 56px;
-  background-color: #fff;
-  border: 1px solid #999;
-  border-radius: 20px;
-  font-size: 28px;
-  font-weight: 600;
-  color: #666;
-  padding: 10px 0 0 20px;
-  box-shadow: 5px 5px #111;
-  margin-top: 20px;
+    position: relative;
+    width: 100%;
+    height: 56px;
+    background-color: #fff;
+    border: 1px solid #999;
+    border-radius: 20px;
+    font-size: 28px;
+    font-weight: 600;
+    color: #666;
+    padding: 10px 0 0 20px;
+    box-shadow: 5px 5px #111;
+    margin-top: 20px;
 }
 
 .wait_box {
-  position: absolute;
-  right: 16px;
-  top: 7px;
-  width: 100px;
-  height: 40px;
-  background-color: #111;
-  color: #fff;
-  border-radius: 14px;
-  text-align: center;
-  padding-top: 9px;
-  font-size: 16px;
+    position: absolute;
+    right: 16px;
+    top: 7px;
+    width: 100px;
+    height: 40px;
+    background-color: #111;
+    color: #fff;
+    border-radius: 14px;
+    text-align: center;
+    padding-top: 9px;
+    font-size: 16px;
 }
