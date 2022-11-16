@@ -88,6 +88,7 @@
 
 <section class="join">
     <input
+            id="joinBtn"
             type="button"
             onclick="toggleBtn()"
             class="join_btn"
@@ -100,18 +101,13 @@
         <input id="blog" type="text" placeholder="블로그 주소"/>
         <textarea name="" id="introduce" placeholder="자기소개"></textarea>
         <textarea name="" id="strengths" placeholder="객관적인 자신의 장점"></textarea>
-        <input id="joinSubmit" type="submit" value="합류 신청하기" class="join_submit" onclick="join()"/>
+        <div class="btn_wrap">
+            <input id="joinSubmit" type="submit" value="합류 신청하기" class="join_submit" onclick="join()"/>
+            <input id="joinClose" type="button" value="닫기" class="join_close" onclick="toggleBtn()"/>
+        </div>
     </article>
     <article class="request">
         <ul id="name_box">
-<!--            <li class="req_member">-->
-<!--                Changmin-->
-<!--                <div class="wait_box">승인 대기중</div>-->
-<!--            </li>-->
-<!--            <li class="req_member">-->
-<!--                Younghoon-->
-<!--                <div class="wait_box">승인 대기중</div>-->
-<!--            </li>-->
         </ul>
     </article>
 </section>

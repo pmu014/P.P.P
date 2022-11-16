@@ -128,10 +128,10 @@ h1 {
 }
 
 .join_wrap {
-  /* display: none; */
+  display: none;
   width: 400px;
   height: 100%;
-  margin: auto;
+  margin: 40px auto;
   padding: 10px 0 20px;
   background-color: #fff;
   border: 1px solid #aaa;
@@ -149,7 +149,11 @@ h1 {
   color: #666666;
 }
 
-.join_wrap > input.join_submit {
+.btn_wrap {
+  height: 100px;
+}
+
+input.join_submit {
   display: block;
   width: 150px;
   height: 40px;
@@ -157,10 +161,28 @@ h1 {
   border-radius: 75px;
   color: #fff;
   font-size: 16px;
-  margin: 30px auto;
+  margin: 40px 15px 30px 35px;
   font-weight: 500;
   cursor: pointer;
   padding: 0;
+  border: none;
+  float: left;
+}
+
+input.join_close {
+  display: block;
+  width: 150px;
+  height: 40px;
+  background-color: #8e00d8;
+  border-radius: 75px;
+  color: #fff;
+  font-size: 16px;
+  margin: 40px 15px 30px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  float: left;
 }
 
 .join_wrap > textarea::placeholder,
