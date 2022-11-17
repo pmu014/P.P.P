@@ -8,17 +8,12 @@ db = client.dbsparta
 @app.route('/')
 def home():
     return render_template('index.html')
-
-
 @app.route('/members-layout')
 def getmembers():
     return render_template('members_layout.html')
-
-
 @app.route('/members_up')
 def members_up():
     return render_template('members_up.html')
-
 @app.route('/members_db', methods=["POST"])
 def members_db():
     koName_receive = request.form['koName_give']
@@ -29,7 +24,6 @@ def members_db():
     blog_receive = request.form['blog_give']
     email_receive = request.form['email_give']
     github_receive = request.form['github_give']
-
     member_list = list(db.members.find({}, {'_id': False}))
     print(member_list)
     count = len(member_list)
@@ -46,7 +40,12 @@ def members_db():
     }
     db.members.insert_one(doc)
     return jsonify({'msg': '조원추가 완료!'})
-#
+
+@app.route("/members/<id>", methods=["GET"])
+def members_dbs(id):
+    members_list = list(db.members.find({'index': int(id)}, {'_id': False}))
+    return jsonify({'members': members_list})
+
 @app.route("/join", methods=["POST"])
 def join_post():
     name_receive = request.form['name_give']
@@ -54,7 +53,6 @@ def join_post():
         'enName' :name_receive
     }
     db.join.insert_one(doc)
-
     return jsonify({'msg':'합류 신청 완료!'})
 
 @app.route("/join", methods=["GET"])
@@ -73,25 +71,11 @@ def guest_post():
         'guestComment': guestComment_receive
     }
     db.guests.insert_one(doc)
-
     return jsonify({'msg':'방명록 작성 완료!'})
-
 @app.route("/guestBook", methods=["GET"])
 def guest_get():
     guests_list = list(db.guests.find({}, {'_id': False}))
     return jsonify({'guests':guests_list})
-
-# @app.route('/members-layout')
-# def members_get():
-#     return render_template('members_layout.html')
-
-# @app.route('/members-layout/:id')
-# def members_get():
-#     return render_template('members_layout.html')
-
-# @app.route('/members-layout')
-# def member():
-#     idx = request.args.get("idx")
 
 if __name__ == '__main__':
     app.run('0.0.0.0', port=5000, debug=True)

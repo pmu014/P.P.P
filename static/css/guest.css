@@ -1,0 +1,98 @@
+.comments {
+    display: none;
+    position: relative;
+    width: 100%;
+}
+
+.guestBook {
+    width: 100%;
+    background-color: #ccc;
+    padding: 10px;
+}
+
+.d-grid gap-2 {
+    width: 95%;
+    margin: 20px auto 20px auto;
+}
+
+.btn-primary {
+    background-color: #8e00d8;
+    border-color: #8e00d8;
+}
+
+.btn-primary:hover {
+    background-color: #620d90;
+    border-color: #620d90;
+}
+
+.btn-dark{
+  background-color: #fff;
+  color: #8e00d8;
+  border: 2px solid #8e00d8;
+  font-weight: 600;
+  width: 115px;
+}
+
+.btn-dark:hover {
+  background-color: #8e00d8;
+  color: #fff;
+  border-color: #8e00d8;
+}
+
+.btn-outline-dark {
+  width: 115px;
+  margin-left: 20px;
+  border: 2px solid #666;
+  color: #666;
+  font-weight: 600;
+}
+
+.btn-outline-dark:hover {
+  background-color: #666;
+  color: #fff;
+  border-color: #666;
+}
+
+.mypost {
+    width: 95%;
+    max-width: 100%;
+    margin: 20px auto 20px auto;
+    background-color: white;
+    box-shadow: 0px 0px 3px 0px black;
+    padding: 20px;
+}
+
+.mypost > button {
+    margin-top: 15px;
+}
+
+.comm-list {
+    width: 90%;
+    max-width: 95%;
+    margin: 10px auto;
+}
+
+.card {
+    padding: 10px;
+    margin: 15px 0;
+    border-radius: 20px;
+    /*border: 1px solid ;*/
+    box-shadow: 5px 5px #999;
+}
+
+.blockquote-footer {
+    margin-top: 0;
+}
+
+.card > .blockquote-footer > cite {
+    margin-left: 10px;
+}
+
+.blockquote {
+    margin-left: 20px;
+}
+
+.postBt {
+    text-align: center;
+    margin-top: 20px;
+}

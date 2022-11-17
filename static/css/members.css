@@ -2,6 +2,11 @@
     font-family: 'Gowun Dodum', sans-serif;
 }
 
+.members_body {
+    height: 1200px;
+    background-color: purple;
+}
+
 .head {
     width: 100%;
     height: 200px;
@@ -20,6 +25,7 @@
 
 .head > h1 {
     font-size: 60px;
+    font-weight: 600;
 }
 
 .main-text {
@@ -28,46 +34,59 @@
 }
 
 .MBTI {
-    padding: 80px;
-    margin-right: 100px;
-    margin-left: 100px;
-    color: #8e00d8;
+    width: 70%;
+    margin: auto;
+    color: #fff;
+    padding-top: 50px;
 }
 
-.MBTI > h1 {
-    font-size: 90px;
+.MBTI > p {
+    font-size: 200px;
+    font-weight: 300;
+    margin-bottom: 0;
+    letter-spacing: 10px;
 }
 
 .MBTI > h2 {
-    font-size: 130px;
+    font-size: 150px;
+    font-weight: 600;
+    margin-top: -30px;
 }
 
-.ppp {
-    margin-right: 100px;
-    margin-left: 100px;
+.text_wrap {
+    width: 68%;
+    margin: 70px auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    color: #fff;
 }
 
-.ppp > h1 {
-    font-size: 70px;
+/*.introduce {*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    justify-content: center;*/
+/*}*/
+
+.introduce > p {
+    font-size: 20px;
 }
 
-.pp {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+/*.strength {*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    justify-content: center;*/
+/*}*/
 
+.text_wrap > h3 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 20px;
 }
 
-.p {
-    width: 800px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    margin-right: 50px;
-    margin-left: 50px;
-    align-items: center;
+.url {
+    margin-top: 50px;
 }
 
 .members {

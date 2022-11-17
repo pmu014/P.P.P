@@ -1,6 +1,6 @@
 $(document).ready(function () {
     show_order();
-    show_comment()
+    show_comment();
 });
 
 function show_order() {
@@ -73,12 +73,13 @@ function show_comment() {
                 let guestComment = rows[i]['guestComment']
 
                 let temp_html = `<div class="card">
-                                    <blockquote class="blockquote">
-                                        <p>${guestComment}</p>
-                                    </blockquote>
                                     <figcaption class="blockquote-footer">
                                         ${guestMbti}<cite title="Source Title">${guestName}</cite>
                                     </figcaption>
+                                    <blockquote class="blockquote">
+                                        <p>${guestComment}</p>
+                                    </blockquote>
+                                    
                                 </div>`
                 $('#comm-list').append(temp_html)
             }
@@ -93,3 +94,4 @@ function open_box() {
 function close_box() {
     $('#comment-box').hide()
 }
+
