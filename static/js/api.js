@@ -1,6 +1,6 @@
 $(document).ready(function () {
     show_order();
-    show_comment();
+    teamshow_comment();
 });
 
 function show_order() {
@@ -45,15 +45,15 @@ function join() {
     })
 }
 
-function save_comment() {
-    let formem = $('#inputGroupSelect01').val()
+function teamsave_comment() {
     let guestName = $('#guestName').val()
     let guestMbti = $('#guestMbti').val()
     let guestComment = $('#guestComment').val()
+
     $.ajax({
         type: 'POST',
-        url: '/guestBook',
-        data: {'formem_give': formem,'guestName_give': guestName, 'guestMbti_give': guestMbti, 'guestComment_give': guestComment},
+        url: '/tguestBook',
+        data: {'guestName_give': guestName, 'guestMbti_give': guestMbti, 'guestComment_give': guestComment},
         success: function (response) {
             alert(response['msg'])
             window.location.reload()
@@ -61,39 +61,17 @@ function save_comment() {
     })
 }
 
-function show_comment() {
+function teamshow_comment() {
     $.ajax({
         type: "GET",
-        url: "/guestBook",
+        url: "/tguestBook",
         data: {},
         success: function (response) {
             let rows = response['guests']
             for (let i = 0; i < rows.length; i++) {
-                let formem = rows[i]['formem']
                 let guestName = rows[i]['guestName']
                 let guestMbti = rows[i]['guestMbti']
                 let guestComment = rows[i]['guestComment']
-
-                switch (formem) {
-                    case "정훈": {
-
-                        break
-                    }
-                    case "승민": {
-                        break
-                    }
-                    case "민욱": {
-                        break
-                    }
-                    case "예진": {
-                        break
-                    }
-                    case "진우": {
-                        break
-                    }
-                    default: "TeamN5a"
-                        break
-                }
 
                 let temp_html = `<div class="card">
                                     <figcaption class="blockquote-footer">

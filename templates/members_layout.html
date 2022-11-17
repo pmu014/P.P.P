@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="../static/css/base.css"/>
     <link rel="stylesheet" href="../static/css/guest.css"/>
     <script src="../static/js/members.js"></script>
-    <script src="../static/js/api.js"></script>
 
     <title>Members</title>
 
@@ -43,15 +42,15 @@
                     <div class="mem_img img-2"></div>
                 </a>
                 <p class="mem_name">Seungmin</p>
-                <p class="mem_intro">N5a 조장</p>
+                <p class="mem_intro">N5a 나이를 담당..</p>
             </li>
 
             <li class="member">
                 <a href="/members-layout?id=2">
                     <div class="mem_img img-3"></div>
                 </a>
-                <p class="mem_name">Minwook</p>
-                <p class="mem_intro">N5a 조장</p>
+                <p class="mem_name">Minuk</p>
+                <p class="mem_intro">N5a API 담당</p>
             </li>
 
             <li class="member">
@@ -59,7 +58,7 @@
                     <div class="mem_img img-4"></div>
                 </a>
                 <p class="mem_name">Yejin</p>
-                <p class="mem_intro">N5a 조장</p>
+                <p class="mem_intro">N5a 홍일점막내</p>
             </li>
 
             <li class="member">
@@ -67,7 +66,7 @@
                     <div class="mem_img img-5"></div>
                 </a>
                 <p class="mem_name">Jinwoo</p>
-                <p class="mem_intro">N5a 조장</p>
+                <p class="mem_intro">N5a 공상가</p>
             </li>
         </ul>
     </section>
@@ -75,11 +74,18 @@
 
     <section class="guestBook">
         <div class="d-grid gap-2">
-            <button class="btn btn-primary" type="button" onclick="open_box()">흔적 남기기</button>
-            <!--            <i class="ico_down"></i>-->
+            <button class="btn btn-primary" type="button" onclick="open_box()">N5a 멤버에게 흔적 남기기!!</button>
         </div>
         <div class="comments" id="comment-box">
             <div class="mypost">
+                <select id="memberNum" name="select" class="form-select" aria-label="Default select example">
+                <option selected>코멘트 남길 사람을 선택해주세요.</option>
+                <option value="0">ESFP Jeonghoon</option>
+                <option value="1">INFP Seungmin</option>
+                <option value="2">INTP Minuk</option>
+                <option value="3">INTP Yejin</option>
+                <option value="4">INFP Jinwoo</option>
+            </select>
                 <div class="form-floating mb-3">
                     <input type="text" class="form-control" id="guestName" placeholder="url">
                     <label for="guestName">NICKNAME</label>
@@ -94,7 +100,7 @@
                     <label for="guestComment">COMMENTS</label>
                 </div>
                 <div class="postBt">
-                    <button onclick="save_comment()" type="button" class="btn btn-dark">흔적 남기기</button>
+                    <button onclick="membersave_comment()" type="button" class="btn btn-dark">흔적 남기기</button>
                     <button onclick="close_box()" type="button" class="btn btn-outline-dark">닫기</button>
                 </div>
 

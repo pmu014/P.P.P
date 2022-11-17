@@ -60,23 +60,44 @@ def join_get():
     first_name = list(db.join.find({}, {'_id': False}))
     return jsonify({'firstName':first_name})
 
-@app.route("/guestBook", methods=["POST"])
-def guest_post():
-    formem_receive = request.form['formem_give']
+@app.route("/tguestBook", methods=["POST"])
+def tguest_post():
     guestName_receive = request.form['guestName_give']
     guestMbti_receive = request.form['guestMbti_give']
     guestComment_receive = request.form['guestComment_give']
+
     doc = {
-        'formem':formem_receive,
         'guestName' :guestName_receive,
         'guestMbti': guestMbti_receive,
         'guestComment': guestComment_receive
     }
-    db.guests.insert_one(doc)
+    db.tguests.insert_one(doc)
     return jsonify({'msg':'방명록 작성 완료!'})
-@app.route("/guestBook", methods=["GET"])
-def guest_get():
-    guests_list = list(db.guests.find({}, {'_id': False}))
+
+@app.route("/tguestBook", methods=["GET"])
+def tguest_get():
+    guests_list = list(db.tguests.find({}, {'_id': False}))
+    return jsonify({'guests':guests_list})
+
+@app.route("/mguestBook", methods=["POST"])
+def mguest_post():
+    memberNum_receive = request.form['memberNum_give']
+    guestName_receive = request.form['guestName_give']
+    guestMbti_receive = request.form['guestMbti_give']
+    guestComment_receive = request.form['guestComment_give']
+
+    doc = {
+        'memberNum' :memberNum_receive,
+        'guestName' :guestName_receive,
+        'guestMbti': guestMbti_receive,
+        'guestComment': guestComment_receive
+    }
+    db.mguests.insert_one(doc)
+    return jsonify({'msg':'방명록 작성 완료!'})
+
+@app.route("/mguestBook", methods=["GET"])
+def mguest_get():
+    guests_list = list(db.mguests.find({}, {'_id': False}))
     return jsonify({'guests':guests_list})
 
 if __name__ == '__main__':

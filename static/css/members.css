@@ -2,6 +2,10 @@
     font-family: 'Gowun Dodum', sans-serif;
 }
 
+main {
+    padding-bottom: 100px;
+    background-color: #ccc;
+}
 .members_body {
     height: 1200px;
     background-color: #fff;
