@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="../static/css/base.css"/>
     <link rel="stylesheet" href="../static/css/guest.css"/>
     <script src="../static/js/members.js"></script>
-    <script src="../static/js/api.js"></script>
 
     <title>Members</title>
 
@@ -79,6 +78,14 @@
             <!--            <i class="ico_down"></i>-->
         </div>
         <div class="comments" id="comment-box">
+            <select id="memberNum" name="select" class="form-select" aria-label="Default select example">
+                <option selected>코멘트 남길 사람을 선택해주세요.</option>
+                <option value="0">정훈</option>
+                <option value="1">승민</option>
+                <option value="2">민욱</option>
+                <option value="3">예진</option>
+                <option value="4">진우</option>
+            </select>
             <div class="mypost">
                 <div class="form-floating mb-3">
                     <input type="text" class="form-control" id="guestName" placeholder="url">
@@ -94,7 +101,7 @@
                     <label for="guestComment">COMMENTS</label>
                 </div>
                 <div class="postBt">
-                    <button onclick="save_comment()" type="button" class="btn btn-dark">흔적 남기기</button>
+                    <button onclick="membersave_comment()" type="button" class="btn btn-dark">흔적 남기기</button>
                     <button onclick="close_box()" type="button" class="btn btn-outline-dark">닫기</button>
                 </div>
 

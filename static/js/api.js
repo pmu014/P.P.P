@@ -1,6 +1,6 @@
 $(document).ready(function () {
     show_order();
-    show_comment();
+    teamshow_comment();
 });
 
 function show_order() {
@@ -45,13 +45,14 @@ function join() {
     })
 }
 
-function save_comment() {
+function teamsave_comment() {
     let guestName = $('#guestName').val()
     let guestMbti = $('#guestMbti').val()
     let guestComment = $('#guestComment').val()
+
     $.ajax({
         type: 'POST',
-        url: '/guestBook',
+        url: '/tguestBook',
         data: {'guestName_give': guestName, 'guestMbti_give': guestMbti, 'guestComment_give': guestComment},
         success: function (response) {
             alert(response['msg'])
@@ -60,10 +61,10 @@ function save_comment() {
     })
 }
 
-function show_comment() {
+function teamshow_comment() {
     $.ajax({
         type: "GET",
-        url: "/guestBook",
+        url: "/tguestBook",
         data: {},
         success: function (response) {
             let rows = response['guests']
