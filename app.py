@@ -2,8 +2,8 @@ from flask import Flask, render_template, request, jsonify
 app = Flask(__name__)
 
 from pymongo import MongoClient
-client = MongoClient('mongodb+srv://test:test@cluster0.nkgrata.mongodb.net/cluster0?retryWrites=true&w=majority')
-db = client.test
+client = MongoClient('mongodb+srv://test:sparta@cluster0.qsyxhqm.mongodb.net/Cluster0?retryWrites=true&w=majority')
+db = client.dbsparta
 
 @app.route('/')
 def home():
@@ -47,11 +47,11 @@ def members_db():
     db.members.insert_one(doc)
     return jsonify({'msg': '조원추가 완료!'})
 
-@app.route("/members_db", methods=["GET"])
-def members_dbs():
-    members_list = list(db.members.find({}, {'_id': False}))
-    return jsonify({'members' :members_list})
-
+@app.route("/members/<id>", methods=["GET"])
+def members_dbs(id):
+    print(id)
+    members_list = list(db.members.find({'index': int(id)}, {'_id': False}))
+    return jsonify({'members': members_list})
 
 @app.route("/join", methods=["POST"])
 def join_post():

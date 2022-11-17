@@ -1,15 +1,33 @@
 $(document).ready(function () {
-    show_members();
+    function getUrlParams() {
+        var params = {};
+
+        window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi,
+            function(str, key, value) {
+                params[key] = value;
+            }
+        );
+
+        return params;
+    }
+    const params = getUrlParams()
+    const id = params.id
+    console.log({params})
+    show_members(id);
+    console.log("test")
 });
 
-function show_members() {
+function show_members(id) {
+
     $.ajax({
         type: "GET",
-        url: "/members_db",
+        // url: "/members_db",
+        url: `/members/${id}`,
         data: {},
         success: function (response) {
-            let i = 2
+            let i = 0
             let rows = response['members']
+            console.log(rows)
             let koName = rows[i]['koName']
             let enName = rows[i]['enName']
             let mbti = rows[i]['mbti']
@@ -19,7 +37,6 @@ function show_members() {
             let email = rows[i]['email']
             let github = rows[i]['github']
             let index = rows[i]['index']
-            console.log(rows)
             let temp_html = `
             <div class="head">
                 <h1>N5a[${index}] = ["${enName}"]</h1>
