@@ -46,7 +46,13 @@ def members_db():
     }
     db.members.insert_one(doc)
     return jsonify({'msg': '조원추가 완료!'})
-#
+
+@app.route("/members/<id>", methods=["GET"])
+def members_dbs(id):
+    print(id)
+    members_list = list(db.members.find({'index': int(id)}, {'_id': False}))
+    return jsonify({'members': members_list})
+
 @app.route("/join", methods=["POST"])
 def join_post():
     name_receive = request.form['name_give']
