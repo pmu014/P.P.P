@@ -1,3 +1,61 @@
+
+.members {
+    width: 100%;
+    height: 400px;
+    background-color: #666;
+    text-align: center;
+    color: #fff;
+}
+
+.member_title {
+    font-size: 32px;
+    padding: 40px 0;
+}
+
+.mem_wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 80%;
+}
+
+.member {
+    width: 20%;
+}
+
+.mem_img {
+    margin: 0 auto 16px;
+    width: 160px;
+    height: 160px;
+    border-radius: 100px;
+    background-color: #bababa;
+}
+
+.img-1 {
+    background: url("https://ifh.cc/g/sb5dWH.jpg") center;
+}
+
+.img-2 {
+    background: url("https://ifh.cc/g/VgNKXJ.jpg") center;
+}
+
+.img-3 {
+    background: url("https://ifh.cc/g/lYdPSx.jpg") center;
+}
+
+.img-4 {
+    background: url("https://ifh.cc/g/Q0r4pX.jpg") center;
+}
+
+.img-5 {
+    background: url("https://ifh.cc/g/p9gwN9.jpg") center;
+}
+
+.mem_name {
+    font-size: 20px;
+}
+
 .comments {
     display: none;
     position: relative;
@@ -86,6 +144,8 @@
 
 .card > .blockquote-footer > cite {
     margin-left: 10px;
+    color: #8e00d8;
+    font-weight: 600;
 }
 
 .blockquote {

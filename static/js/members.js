@@ -33,11 +33,12 @@ function show_members(id) {
                 let email = rows[i]['email']
                 let github = rows[i]['github']
                 let index = rows[i]['index']
-                console.log(koName)
+                let img = rows[i]['img']
+
                 let temp_html = `<div class="head">
                                     <h1>N5a[${index}] = ["${enName}"]</h1>
                                 </div>
-                                <div class="main-text">
+                                <div class="main-text" style="background: url(${img}) center top">
                                      <div class="MBTI">
                                             <p>${mbti}</p>
                                             <h2>${koName}</h2>
@@ -52,9 +53,9 @@ function show_members(id) {
                                                 <p>${strengths}</p>
                                              </div>                                         
                                          <div class="url">
-                                             <h4>Blog : ${blog}</h4>
-                                             <h4>Email : ${email}</h4>
-                                             <h4>github : ${github}</h4>
+                                             <a href="${blog}"><h4>Blog : ${blog}</h4></a>
+                                             <a href="${email}"><h4>Email : ${email}</h4></a>
+                                             <a href="${github}"><h4>github : ${github}</h4></a>
                                          </div>
                                      </div>`
                 $('#members').append(temp_html)

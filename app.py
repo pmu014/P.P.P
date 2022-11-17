@@ -62,10 +62,12 @@ def join_get():
 
 @app.route("/guestBook", methods=["POST"])
 def guest_post():
+    formem_receive = request.form['formem_give']
     guestName_receive = request.form['guestName_give']
     guestMbti_receive = request.form['guestMbti_give']
     guestComment_receive = request.form['guestComment_give']
     doc = {
+        'formem':formem_receive,
         'guestName' :guestName_receive,
         'guestMbti': guestMbti_receive,
         'guestComment': guestComment_receive
