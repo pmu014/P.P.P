@@ -65,8 +65,11 @@ def tguest_post():
     guestName_receive = request.form['guestName_give']
     guestMbti_receive = request.form['guestMbti_give']
     guestComment_receive = request.form['guestComment_give']
+    num_list = list(db.tguests.find({}, {'_id': False}))
+    count = len(num_list)
 
     doc = {
+        'cnt': count,
         'guestName' :guestName_receive,
         'guestMbti': guestMbti_receive,
         'guestComment': guestComment_receive
@@ -79,14 +82,24 @@ def tguest_get():
     guests_list = list(db.tguests.find({}, {'_id': False}))
     return jsonify({'guests':guests_list})
 
+@app.route("/tguestBook/delete", methods=["POST"])
+def teamdelete_comment():
+    cnt_receive = request.form['cnt_give']
+    db.tguests.delete_one({'cnt':int(cnt_receive)})
+    return jsonify({'msg': '삭제 완료'})
+
 @app.route("/mguestBook", methods=["POST"])
 def mguest_post():
     memberNum_receive = request.form['memberNum_give']
     guestName_receive = request.form['guestName_give']
     guestMbti_receive = request.form['guestMbti_give']
     guestComment_receive = request.form['guestComment_give']
+    num_list = list(db.mguests.find({}, {'_id': False}))
+    count = len(num_list)
 
     doc = {
+
+        'cnt' : count,
         'memberNum' :memberNum_receive,
         'guestName' :guestName_receive,
         'guestMbti': guestMbti_receive,
@@ -99,6 +112,12 @@ def mguest_post():
 def mguest_get():
     guests_list = list(db.mguests.find({}, {'_id': False}))
     return jsonify({'guests':guests_list})
+
+@app.route("/mguestBook/delete", methods=["POST"])
+def memberdelete_comment():
+    cnt_receive = request.form['cnt_give']
+    db.mguests.delete_one({'cnt':int(cnt_receive)})
+    return jsonify({'msg': '삭제 완료'})
 
 if __name__ == '__main__':
     app.run('0.0.0.0', port=5000, debug=True)

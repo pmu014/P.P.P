@@ -142,6 +142,7 @@
 }
 
 .card {
+    position: relative;
     padding: 10px;
     margin: 15px 0;
     border-radius: 20px;
@@ -161,6 +162,15 @@
 
 .blockquote {
     margin-left: 20px;
+    width: 90%;
+}
+
+.del_btn {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    width: 80px;
+    font-size: 0.8rem;
 }
 
 .postBt {

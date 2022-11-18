@@ -90,6 +90,7 @@ function membershow_comment(id) {
         success: function (response) {
             let rows = response['guests']
             for (let i = 0; i < rows.length; i++) {
+                let cnt = rows[i]['cnt']
                 let memberNum = rows[i]['memberNum']
                 let guestName = rows[i]['guestName']
                 let guestMbti = rows[i]['guestMbti']
@@ -103,13 +104,25 @@ function membershow_comment(id) {
                                         <blockquote class="blockquote">
                                             <p>${guestComment}</p>
                                         </blockquote>
-                                        
+                                        <button onclick="memberdelete_comment(${cnt})" type="button" class="btn del_btn btn-dark">삭제하기</button>
                                     </div>`
                     $('#comm-list').append(temp_html)
                     }
                 }
             }
     });
+}
+
+function  memberdelete_comment(cnt) {
+    $.ajax({
+        type: 'POST',
+        url: '/mguestBook/delete',
+        data: {cnt_give: cnt},
+        success: function (response) {
+            alert(response['msg'])
+            window.location.reload()
+        }
+    })
 }
 
 function open_box() {

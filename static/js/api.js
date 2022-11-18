@@ -69,6 +69,7 @@ function teamshow_comment() {
         success: function (response) {
             let rows = response['guests']
             for (let i = 0; i < rows.length; i++) {
+                let cnt = rows[i]['cnt']
                 let guestName = rows[i]['guestName']
                 let guestMbti = rows[i]['guestMbti']
                 let guestComment = rows[i]['guestComment']
@@ -80,7 +81,7 @@ function teamshow_comment() {
                                     <blockquote class="blockquote">
                                         <p>${guestComment}</p>
                                     </blockquote>
-                                    
+                                    <button onclick="teamdelete_comment(${cnt})" type="button" class="btn btn-dark">삭제하기</button>             
                                 </div>`
                 $('#comm-list').append(temp_html)
             }
@@ -88,6 +89,17 @@ function teamshow_comment() {
     });
 }
 
+function  teamdelete_comment(cnt) {
+    $.ajax({
+        type: 'POST',
+        url: '/tguestBook/delete',
+        data: {cnt_give: cnt},
+        success: function (response) {
+            alert(response['msg'])
+            window.location.reload()
+        }
+    })
+}
 function open_box() {
     $('#comment-box').show()
 }

@@ -3,6 +3,7 @@
 }
 
 main {
+    position: relative;
     padding-bottom: 100px;
     background-color: #ccc;
 }
@@ -139,4 +140,16 @@ main {
 
 .mem_name {
     font-size: 20px;
+}
+
+.teampage_btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: rgba(142,0,216,0.5);
+    border: 3px solid #8e00d8;
+    color: #fff;
 }
