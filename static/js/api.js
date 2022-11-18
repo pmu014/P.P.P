@@ -25,13 +25,13 @@ function show_order() {
 }
 
 function join() {
-    let koName = $('#koName').val()
+    // let koName = $('#koName').val()
     let enName = $('#enName').val()
-    let mbti = $('#mbti').val()
-    let blog = $('#blog').val()
-    let introduce = $('#introduce').val()
-    let strengths = $('#strengths').val()
-    let joinSubmit = $('#joinSubmit').val()
+    // let mbti = $('#mbti').val()
+    // let blog = $('#blog').val()
+    // let introduce = $('#introduce').val()
+    // let strengths = $('#strengths').val()
+    // let joinSubmit = $('#joinSubmit').val()
     let firstName = enName.split(' ')[0].replace(/^[a-z]/, char => char.toUpperCase());
 
     $.ajax({
@@ -81,7 +81,7 @@ function teamshow_comment() {
                                     <blockquote class="blockquote">
                                         <p>${guestComment}</p>
                                     </blockquote>
-                                    <button onclick="teamdelete_comment(${cnt})" type="button" class="btn btn-dark">삭제하기</button>             
+                                    <button onclick="teamdelete_comment(${cnt})" type="button" class="btn del_btn btn-dark">삭제하기</button>             
                                 </div>`
                 $('#comm-list').append(temp_html)
             }

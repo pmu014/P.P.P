@@ -17,6 +17,8 @@ $(document).ready(function () {
     membershow_comment(id);
 });
 
+// ********* 마음에 드는 코드 **********
+
 function show_members(id) {
     $.ajax({
         type: 'GET',
@@ -64,6 +66,8 @@ function show_members(id) {
         }
     });
 }
+
+// ********* 여기 까지 **********
 
 function membersave_comment() {
     let memberNum = $('#memberNum option:selected').val()
