@@ -65,21 +65,31 @@ function show_members(id) {
     });
 }
 
-function membersave_comment(id) {
+function membersave_comment() {
     let memberNum = $('#memberNum option:selected').val()
     let guestName = $('#guestName').val()
     let guestMbti = $('#guestMbti').val()
     let guestComment = $('#guestComment').val()
-
-    $.ajax({
-        type: 'POST',
-        url: '/mguestBook',
-        data: {'memberNum_give': memberNum, 'guestName_give': guestName, 'guestMbti_give': guestMbti, 'guestComment_give': guestComment},
-        success: function (response) {
-            alert(response['msg'])
-            window.location.reload()
-        }
-    })
+    if (memberNum == "select") {
+        alert('이름을 선택해주세요')
+        window.location.reload()
+    }
+    else {
+        $.ajax({
+            type: 'POST',
+            url: '/mguestBook',
+            data: {
+                'memberNum_give': memberNum,
+                'guestName_give': guestName,
+                'guestMbti_give': guestMbti,
+                'guestComment_give': guestComment
+            },
+            success: function (response) {
+                alert(response['msg'])
+                window.location.reload()
+            }
+        })
+    }
 }
 
 function membershow_comment(id) {
